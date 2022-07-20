@@ -108,7 +108,7 @@ function createTrashButton() {
 }
 
 function createUndoButton() {
-    return createButton('fa-sync-alt', 'Baca ulang' , function (event) {
+    return createButton('fa-sync-alt', 'Lakukan lagi' , function (event) {
         undoBookFromCompleted(event.target.parentElement.parentElement);
     });
 }
