@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bookshelf Apps</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="head_bar">
+      <h1 class="head_bar__title">To do list</h1>
+    </header>
+    <main>
+      <section class="input_section">
+        <h2>Masukkan Kegiatan Baru</h2>
+        <form id="inputBook" action="#" class="form">
+          <div class="input">
+            <label for="inputBookTitle">Judul Kegiatan</label>
+            <input id="inputBookTitle" type="text" name="judul" required />
+          </div>
+          <div class="input">
+            <label for="inputBookAuthor">Subject</label>
+            <input id="inputBookAuthor" type="text" name="penulis" required />
+          </div>
+          <div class="input">
+            <label for="inputBookYear">Tanggal (dalam angka)</label>
+            <input id="inputBookYear" type="number" name="tahun" required />
+          </div>
+          <div class="input_inline">
+            <label for="inputBookIsComplete">Selesai dilakukan</label>
+            <input id="inputBookIsComplete" type="checkbox" name="baca" />
+          </div>
+          <button id="bookSubmit" type="submit">
+            Submit
+          </button>
+        </form>
+      </section>
+
+      <section class="search_section">
+        <h2>Cari Kegiatan</h2>
+        <form id="searchBook" action="#" class="form">
+          <label for="searchBookTitle">Judul</label>
+          <input id="searchBookTitle" type="text" />
+          <button id="searchSubmit" type="submit">Cari</button>
+        </form>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Belum dilakukan</h2>
+        <p class="counter">Jumlah: <span id="belum-baca-count">0</span></p>
+        <div class="list-item" id="belum-baca"></div>
+      </section>
+
+      <section class="book_shelf">
+        <h2>Sudah dilakukan</h2>
+        <p class="counter">Jumlah: <span id="sudah-baca-count">0</span></p>
+        <div class="list-item" id="sudah-baca"></div>
+      </section>
+    </main>
+
+    <script src="js/storage.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
